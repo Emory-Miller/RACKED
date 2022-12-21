@@ -1,74 +1,73 @@
 application {
   config {
-	baseName RACKED\
-	applicationType monolith\
-	packageName rocks.zipcode\
-	authenticationType jwt\
- 	prodDatabaseType mysql\
- 	clientFramework react\
-  \}\
-	entities *\
-\}\
-\
-entity Rack \{\
-	location Location\
-	review Review\
-	size Size\
-    	image Image\
-	starRating StarRating\
-    \
-\}\
-\
-entity Review \{\
-	location Location\
-	image Image\
-	size Size\
-	locationStar StarRating\
-	securityStar StarRating	\
-	generalStar StarRating\
-	amenity Amenity\
-\}\
-\
-entity Amenity \{\
-	name String\
-\}\
-\
-entity Location \{\
-	distanceFromUser Integer\
-	gpsCoordinates String\
-\}\
-\
-entity Image\{\
- 	imageLocation String\
- 	image ImageBlob\
-\}\
-\
-enum Size \{\
-  	SMALL("Small"),\
-  	MEDIUM("Medium"),\
-  	LARGE("Large"),\
-  	XL("Extra-Large")\
-\}\
-\
-\
-enum StarRating\{\
-	ONE("One"), \
-	TWO("Two"),\
-	THREE("Three"),\
-	FOUR("Four"),\
-	FIVE("Five")\
-\}\
-\
-relationship OneToMany \{\
-  	Rack to Image\
-  	Rack to Review\
-  	Location to Rack\
-  	User to Review\
-  	Review to Amenity\
-  	Review to StarRating\
-\}\
-\
-relationship ManyToMany \{\
-	User to Rack\
-\}\
+	baseName RACKED
+	applicationType monolith
+	packageName rocks.zipcode
+	authenticationType jwt
+ 	prodDatabaseType mysql
+ 	clientFramework react
+  }
+	entities *
+}
+
+entity Rack {
+	location Location
+	review Review
+	size Size
+    	image Image
+	starRating StarRating
+    
+}
+
+entity Review {
+	location Location
+	image Image
+	size Size
+	locationStar StarRating
+	securityStar StarRating
+	generalStar StarRating
+	amenity Amenity
+}
+
+entity Amenity {
+	name String
+}
+
+entity Location {
+	distanceFromUser Integer
+	gpsCoordinates String
+}
+
+entity Image {
+ 	imageLocation String
+ 	image ImageBlob
+}
+
+enum Size {
+  	SMALL("Small"),
+  	MEDIUM("Medium"),
+  	LARGE("Large"),
+  	XL("Extra-Large")
+}
+
+enum StarRating {
+	ONE("One"), 
+	TWO("Two"),
+	THREE("Three"),
+	FOUR("Four"),
+	FIVE("Five")
+}
+
+relationship OneToMany {
+  	Rack to Image
+	Rack to Review
+  	Location to Rack
+  	User to Review
+  	Review to Amenity
+  	Review to StarRating
+}
+
+relationship ManyToMany {
+	User to Rack
+}
 }
