@@ -14,7 +14,7 @@ entity Rack {
 	location Location
 	review Review
 	size Size
-    	image Image
+	image Image
 	starRating StarRating
     
 }
