@@ -2,33 +2,32 @@
 application {
 
   config {
-    baseName RACKED
-    applicationType monolith
-    packageName zipcode.rocks
-    authenticationType jwt
-    prodDatabaseType mysql
-    clientFramework react
+  	baseName RACKED
+	applicationType monolith
+	packageName zipcode.rocks
+	authenticationType jwt
+	prodDatabaseType mysql
+	clientFramework react
   }
-  entities *
+  	entities *
 }
 
 entity Rack {
 	location Location
-    reviewAggregate ReviewAggregate
-    sizeAggregate SizeAggregate
-    image Image
-    starAggregate StarAggregate
-    
+	reviewAggregate ReviewAggregate
+	sizeAggregate SizeAggregate
+	image Image
+	starAggregate StarAggregate
 }
 
 entity Review {
 	location Location
-    image Image
-    size Size
-    locationStar StarRating
-    securityStar StarRating
-    generalStar StarRating
-    ammenity Ammenity
+	image Image
+	size Size
+	locationStar StarRating
+	securityStar StarRating
+	generalStar StarRating
+	ammenity Ammenity
 }
 
 entity Ammenity {
@@ -37,7 +36,7 @@ entity Ammenity {
 
 entity Location {
 	distanceFromUser Integer
-    gpsCoordinates String
+	gpsCoordinates String
 }
 
 entity Image{
@@ -55,10 +54,10 @@ enum Size {
 
 enum StarRating{
 	ONE("One"), 
-    TWO("Two"),
-    THREE("Three"),
-    FOUR("Four"),
-    FIVE("Five")
+	TWO("Two"),
+	THREE("Three"),
+	FOUR("Four"),
+	FIVE("Five")
 }
 
 relationship OneToMany {
