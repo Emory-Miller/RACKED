@@ -2,11 +2,8 @@
 application {
 
   config {
-  
     baseName RACKED
-    
     applicationType monolith
-    
     packageName zipcode.rocks
     authenticationType jwt
     prodDatabaseType mysql
