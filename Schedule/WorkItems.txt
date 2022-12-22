@@ -1,0 +1,22 @@
+RACKED
+
+JDL data model
+  entities
+  relationships
+  
+Test REST API
+
+Read and understand front-end code of "webapp/"
+
+Analyze and determine "central entities" that need to be restricted in a user view
+
+Modify demo data to appropriate values
+
+Add users
+
+Add URLs ass needed
+
+Implement the following items:
+
+Develop demo scenario
+  step-by-step use of capabilities
