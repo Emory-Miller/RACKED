@@ -75,6 +75,7 @@ relationship OneToMany {
 
 relationship ManyToMany {
 	BikerProfile to Rack
+	BikerProfile to Review
 }
 
 relationship OneToOne {
