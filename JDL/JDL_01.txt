@@ -10,13 +10,18 @@ application {
 	entities *
 }
 
+entity BikerProfile {
+	user User
+	rack Rack
+	review Review
+}
+
 entity Rack {
 	location Location
 	review Review
 	size Size
 	image Image
 	starRating StarRating
-    
 }
 
 entity Review {
@@ -62,12 +67,16 @@ relationship OneToMany {
   	Rack to Image
 	Rack to Review
   	Location to Rack
-  	User to Review
+  	BikeProfile to Review
+	BikeProfile to Rack
   	Review to Amenity
   	Review to StarRating
 }
 
 relationship ManyToMany {
-	User to Rack
+	BikerProfile to Rack
 }
+
+relationship OneToOne {
+	User to BikerProfile
 }
