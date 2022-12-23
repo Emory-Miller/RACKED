@@ -10,6 +10,9 @@ application {
 	entities *
 }
 
+dto * with mapstruct
+service * with serviceClass
+
 entity BikerProfile {
 	user User
 	rack Rack
