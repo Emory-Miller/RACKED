@@ -1,0 +1,81 @@
+application {
+  config {
+	baseName RACKED
+	applicationType monolith
+	packageName rocks.zipcode
+	authenticationType jwt
+ 	prodDatabaseType mysql
+ 	clientFramework react
+  }
+	entities *
+}
+
+//dto * with mapstruct
+//service * with serviceClass
+
+entity BikerProfile {
+}
+
+entity Rack {
+	rackSize RackSize
+}
+
+entity Review {
+	rackSize RackSize
+}
+
+entity Rating {
+	attribute String
+    starRating StarRating
+}
+
+entity Amenity {
+	name String
+}
+
+entity Location {
+	distanceFromUser Integer
+	gpsCoordinates String
+}
+
+entity Image {
+ 	imageLocation String
+ 	image ImageBlob
+}
+
+enum RackSize {
+  	SMALL("Small"),
+  	MEDIUM("Medium"),
+  	LARGE("Large"),
+  	XL("Extra-Large")
+}
+
+enum StarRating {
+	ONE("One"), 
+	TWO("Two"),
+	THREE("Three"),
+	FOUR("Four"),
+	FIVE("Five")
+}
+
+relationship OneToMany {
+  	Rack to Image
+	Rack to Review
+  	Location to Rack
+    Location to Review
+  	BikerProfile to Review
+	BikerProfile to Rack
+  	Review to Amenity
+    Review to Rating
+}
+
+relationship ManyToMany {
+	BikerProfile to Rack
+    StarRating to Review
+}
+
+relationship OneToOne {
+    Image to Review
+}
+
+    
