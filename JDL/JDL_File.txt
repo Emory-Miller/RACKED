@@ -14,27 +14,13 @@ dto * with mapstruct
 service * with serviceClass
 
 entity BikerProfile {
-	user User
-	rack Rack
-	review Review
 }
 
 entity Rack {
-	location Location
-	review Review
-	size Size
-	image Image
-	starRating StarRating
 }
 
 entity Review {
-	location Location
-	image Image
-	size Size
-	locationStar StarRating
-	securityStar StarRating
-	generalStar StarRating
-	amenity Amenity
+
 }
 
 entity Amenity {
@@ -51,7 +37,7 @@ entity Image {
  	image ImageBlob
 }
 
-enum Size {
+enum RackSize {
   	SMALL("Small"),
   	MEDIUM("Medium"),
   	LARGE("Large"),
@@ -82,5 +68,9 @@ relationship ManyToMany {
 }
 
 relationship OneToOne {
-	User to BikerProfile
+    Location to Review
+    Image to Review
+    RackSize to Review
+    Location to Rack
+    RackSize to Rack
 }
