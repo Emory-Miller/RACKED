@@ -1,0 +1,34 @@
+{
+  "applications": ["RACKED"],
+  "changelogDate": "20221224152045",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "rack",
+  "fields": [],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Rack",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "image",
+      "otherEntityRelationshipName": "rack",
+      "relationshipName": "image",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "review",
+      "otherEntityRelationshipName": "rack",
+      "relationshipName": "review",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "location",
+      "otherEntityRelationshipName": "rack",
+      "relationshipName": "location",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "no"
+}

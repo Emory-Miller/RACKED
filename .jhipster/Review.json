@@ -1,0 +1,47 @@
+{
+  "applications": ["RACKED"],
+  "changelogDate": "20221224152145",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "review",
+  "fields": [],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Review",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "amenity",
+      "otherEntityRelationshipName": "review",
+      "relationshipName": "amenity",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "rating",
+      "otherEntityRelationshipName": "review",
+      "relationshipName": "rating",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "image",
+      "otherEntityRelationshipName": "review",
+      "ownerSide": false,
+      "relationshipName": "image",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "rack",
+      "otherEntityRelationshipName": "review",
+      "relationshipName": "rack",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "location",
+      "otherEntityRelationshipName": "review",
+      "relationshipName": "location",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "no"
+}

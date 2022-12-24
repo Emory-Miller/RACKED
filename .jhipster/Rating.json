@@ -1,0 +1,32 @@
+{
+  "applications": ["RACKED"],
+  "changelogDate": "20221224152245",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "rating",
+  "fields": [
+    {
+      "fieldName": "attribute",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "starRating",
+      "fieldType": "StarRating",
+      "fieldValues": "ONE (One),TWO (Two),THREE (Three),FOUR (Four),FIVE (Five)"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Rating",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "review",
+      "otherEntityRelationshipName": "rating",
+      "relationshipName": "review",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "no"
+}

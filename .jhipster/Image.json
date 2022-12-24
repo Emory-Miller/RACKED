@@ -1,0 +1,39 @@
+{
+  "applications": ["RACKED"],
+  "changelogDate": "20221224152545",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "image",
+  "fields": [
+    {
+      "fieldName": "imageLocation",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "image",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "image"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Image",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "review",
+      "otherEntityRelationshipName": "image",
+      "ownerSide": true,
+      "relationshipName": "review",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "rack",
+      "otherEntityRelationshipName": "image",
+      "relationshipName": "rack",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "no"
+}

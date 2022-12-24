@@ -1,0 +1,37 @@
+{
+  "applications": ["RACKED"],
+  "changelogDate": "20221224152445",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "location",
+  "fields": [
+    {
+      "fieldName": "distanceFromUser",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "gpsCoordinates",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Location",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "rack",
+      "otherEntityRelationshipName": "location",
+      "relationshipName": "rack",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "review",
+      "otherEntityRelationshipName": "location",
+      "relationshipName": "review",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "no"
+}

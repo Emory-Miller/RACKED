@@ -1,0 +1,27 @@
+{
+  "applications": ["RACKED"],
+  "changelogDate": "20221224152345",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "amenity",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Amenity",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "review",
+      "otherEntityRelationshipName": "amenity",
+      "relationshipName": "review",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "no"
+}
