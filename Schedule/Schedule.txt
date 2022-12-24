@@ -7,3 +7,6 @@ Thursday 12/22
 Friday 12/23
   Data Structure - Current JDL is not right, redoing relationships
   JHipster Issues - Issue with Language Level
+
+Saturday 12/24
+  Data Structure - Calving helped work through JDL isses. Downscaled structure. 
