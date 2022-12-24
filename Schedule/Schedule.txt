@@ -9,4 +9,4 @@ Friday 12/23
   JHipster Issues - Issue with Language Level
 
 Saturday 12/24
-  Data Structure - Calving helped work through JDL isses. Downscaled structure. 
+  Data Structure - Calvin helped work through JDL isses. Downscaled structure. 
