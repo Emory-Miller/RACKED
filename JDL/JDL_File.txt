@@ -1,76 +1,74 @@
+
 application {
   config {
-	baseName RACKED
-	applicationType monolith
-	packageName rocks.zipcode
-	authenticationType jwt
- 	prodDatabaseType mysql
- 	clientFramework react
+    baseName RACKED
+    applicationType monolith
+    packageName zipcode.rocks
+    authenticationType jwt
+    prodDatabaseType mysql
+    clientFramework react
   }
-	entities *
-}
-
-dto * with mapstruct
-service * with serviceClass
-
-entity BikerProfile {
+  entities *
 }
 
 entity Rack {
+	location Location
+    reviewAggregate ReviewAggregate
+    sizeAggregate SizeAggregate
+    image Image
+    starAggregate StarAggregate
+    
 }
 
 entity Review {
-
+	location Location
+    image Image
+    size Size
+    locationStar StarRating
+    securityStar StarRating
+    generalStar StarRating
+    ammenity Ammenity
 }
 
-entity Amenity {
+entity Ammenity {
 	name String
 }
 
 entity Location {
 	distanceFromUser Integer
-	gpsCoordinates String
+    gpsCoordinates String
 }
 
-entity Image {
+entity Image{
  	imageLocation String
  	image ImageBlob
 }
 
-enum RackSize {
+enum Size {
   	SMALL("Small"),
   	MEDIUM("Medium"),
   	LARGE("Large"),
   	XL("Extra-Large")
 }
 
-enum StarRating {
+
+enum StarRating{
 	ONE("One"), 
-	TWO("Two"),
-	THREE("Three"),
-	FOUR("Four"),
-	FIVE("Five")
+    TWO("Two"),
+    THREE("Three"),
+    FOUR("Four"),
+    FIVE("Five")
 }
 
 relationship OneToMany {
   	Rack to Image
-	Rack to Review
+  	Rack to Review
   	Location to Rack
-  	BikeProfile to Review
-	BikeProfile to Rack
-  	Review to Amenity
+  	User to Review
+  	Review to Ammenity
   	Review to StarRating
 }
 
 relationship ManyToMany {
-	BikerProfile to Rack
-	BikerProfile to Review
-}
-
-relationship OneToOne {
-    Location to Review
-    Image to Review
-    RackSize to Review
-    Location to Rack
-    RackSize to Rack
+	User to Rack
 }
