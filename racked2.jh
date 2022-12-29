@@ -1,0 +1,70 @@
+application {
+  config {
+	baseName RACKED
+	applicationType monolith
+	packageName rocks.zipcode
+	authenticationType jwt
+ 	prodDatabaseType mysql
+ 	clientFramework react
+  }
+	entities *
+}
+
+dto * with mapstruct
+service * with serviceClass
+
+entity PostRack {
+    longitude Double
+    latitude Double
+    image ImageBlob
+    //amenitiesDescription String
+}
+
+entity Review {
+    starRating StarRating
+    rackSize RackSize
+    comments String
+}
+
+entity Ammenities{
+	ammenity AmmenitiesEnum
+}
+
+relationship ManyToOne {
+    Review{User(login)} to User
+}
+
+relationship OneToMany {
+	PostRack to Review
+}
+
+relationship ManyToOne {
+    Review to PostRack
+}
+
+relationship ManyToOne {
+	Ammenities to Review
+}
+
+enum AmmenitiesEnum {
+	BATHROOM("Bathroom"),
+    FOUNTAIN("Fountain"),
+    PLAYGROUND("Playground"),
+    BIKETOOLS("BikeTools"),
+    RESTAURANT("Restaurant")
+}
+
+enum RackSize {
+  	SMALL("Small"),
+  	MEDIUM("Medium"),
+  	LARGE("Large"),
+  	XL("Extra-Large")
+}
+
+enum StarRating {
+    ONE("One"), 
+    TWO("Two"),
+    THREE("Three"),
+    FOUR("Four"),
+    FIVE("Five")
+}
