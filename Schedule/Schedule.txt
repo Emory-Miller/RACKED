@@ -10,3 +10,18 @@ Friday 12/23
 
 Saturday 12/24
   Data Structure - Calvin helped work through JDL isses. Downscaled structure. 
+
+Sunday 12/25 
+  Christmas
+  
+Monday 12/26
+  Christmas -ext
+  
+Tuesday 12/27
+  Working on JDL, HTML, connecting to API that is generated through JHipster
+  
+Wednesday 12/28
+  Blocker JHipster JDL, makins ture data structure is correct
+  
+Thursday 12/29
+  Working on adding location and maps to project
