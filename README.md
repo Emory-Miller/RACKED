@@ -12,6 +12,4 @@ RACKED will be a mobile application with simple user submitted content similar t
 
 I will build this app using Spring, Java, SQL?, Amazon S3 and REACT for the front-end.
 
-RACKED Code Repository:
-  
-  https://github.com/Emory-Miller/Racked_WIP.git
+RACKED Code Repository: https://github.com/Emory-Miller/Racked_WIP.git
