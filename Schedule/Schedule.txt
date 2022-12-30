@@ -25,3 +25,6 @@ Wednesday 12/28
   
 Thursday 12/29
   Working on adding location and maps to project
+
+Friday 12/30
+  Redoing entities and rearanging relationships
