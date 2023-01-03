@@ -28,3 +28,12 @@ Thursday 12/29
 
 Friday 12/30
   Redoing entities and rearanging relationships
+
+Saturday 12/31
+  Created REACT app with maps. Got GET working. Icons/markers appear on map from API
+  
+Sunday 1/1
+  New Year's Day
+  
+Monday 1/2
+  POST is working on map. Marker appears after typing information in a popup. 
