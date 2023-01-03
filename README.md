@@ -10,7 +10,7 @@ Get RACKED!
 
 RACKED will be a mobile application with simple user submitted content similar to waze. Users will be able to take or upload a photo and tag the location of bike racks. In addition to the rack being geo-tagged, the user will be able to input information about the bike rack such as location safety, rack security, and rack size. The user will also be able to indicate nearby amenities such as bathrooms, water fountains, restaurants or playgrounds. Using Google Maps API, users will also be able to navigate to the rack of their choice.
 
-I will build this app using Spring, Java, SQL?, Amazon S3 and REACT for the front-end.
+I will build this app using Spring, Java, SQL, Amazon S3 and REACT for the front-end.
 
 RACKED Back-End Code Repository: https://github.com/Emory-Miller/Racked_WIP.git
 
